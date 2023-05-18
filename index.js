@@ -1,8 +1,9 @@
 const {Telegraf} = require('telegraf');
 const fetch = require('node-fetch');
+
 // Token de acceso de tu bot
-const token = '';//establecer token dado por el botfather
-const api_token = ''//establecer el token de la api de Stratz pagina web
+const token = 'token del bot de telegram';
+const api_token = 'token de la api de Stratz'
 // Crea un nuevo bot
 const bot = new Telegraf(token);
 
@@ -35,24 +36,10 @@ bot.on('text', (ctx) => {
     const playerId = "PlayerId: " + data.steamAccount.id;
     const playerSmurf = data.steamAccount.smurfFlag;
     const playerFeed = data.identity.feedLevel
-
-    let smurfMessage = "";
-    if (playerSmurf === 0) {
-      smurfMessage = "No has sido detectado como smurf";
-    } else if (playerSmurf === 1) {
-      smurfMessage = "Has sido detectado como jugador smurf";
-    }
-
-    let niveldefedeo = "";
-    if(playerFeed === 0){
-      niveldefedeo = "No eres un jugador feeder"
-    } else if (playerFeed === 1){
-      niveldefedeo = "Eres un jugador feeder"
-    }
-
+    const medalla = data.ranks[0].rank;
     const matchAndWins = ("Partidas: " + data.matchCount + " Victorias: " + data.winCount + " Perdidas: " + (data.matchCount - data.winCount));
     const avatar = data.steamAccount.avatar;
-
+   
     const medallas = {
       Heraldo1: 11, 
       Heraldo2: 12,
@@ -90,15 +77,28 @@ bot.on('text', (ctx) => {
       Divino4: 74,
       Divino5: 75,
     };
-    const medalla = data.ranks[0].rank;
 
     let medallaNombre;
 
-for (const [nombre, valor] of Object.entries(medallas)) {
-  if (valor === medalla) {
-    medallaNombre = nombre;
-  }
-}
+    for (const [nombre, valor] of Object.entries(medallas)) {
+      if (valor === medalla) {
+        medallaNombre = nombre;
+      }
+    }
+
+    let smurfMessage = "";
+    if (playerSmurf === 0) {
+      smurfMessage = "No has sido detectado como smurf";
+    } else if (playerSmurf === 1) {
+      smurfMessage = "Has sido detectado como jugador smurf";
+    }
+
+    let niveldefedeo = "";
+    if(playerFeed === 0){
+      niveldefedeo = "No eres un jugador feeder"
+    } else if (playerFeed === 1){
+      niveldefedeo = "Eres un jugador feeder"
+    }
     console.log(avatar);
     console.log(playerName);
     console.log(playerId);
@@ -124,6 +124,7 @@ for (const [nombre, valor] of Object.entries(medallas)) {
 
 // Inicia el bot
 bot.launch();
+
 
 
 
