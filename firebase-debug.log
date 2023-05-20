@@ -1,0 +1,43 @@
+[debug] [2023-05-20T01:03:03.081Z] ----------------------------------------------------------------------
+[debug] [2023-05-20T01:03:03.083Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javier\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-20T01:03:03.084Z] CLI Version:   12.1.0
+[debug] [2023-05-20T01:03:03.084Z] Platform:      win32
+[debug] [2023-05-20T01:03:03.084Z] Node Version:  v20.2.0
+[debug] [2023-05-20T01:03:03.084Z] Time:          Fri May 19 2023 21:03:03 GMT-0400 (hora de verano de Cuba)
+[debug] [2023-05-20T01:03:03.084Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-20T01:03:03.156Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-20T01:03:03.157Z] > authorizing via signed-in user (javierglezglez97@gmail.com)
+[debug] [2023-05-20T01:03:03.157Z] [iam] checking project dota2stats-25499 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-20T01:03:03.159Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dota2stats-25499:testIamPermissions [none]
+[debug] [2023-05-20T01:03:03.159Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dota2stats-25499:testIamPermissions x-goog-quota-user=projects/dota2stats-25499
+[debug] [2023-05-20T01:03:03.159Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dota2stats-25499:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-20T01:03:04.139Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dota2stats-25499:testIamPermissions 200
+[debug] [2023-05-20T01:03:04.140Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dota2stats-25499:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-20T01:03:04.140Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/dota2stats-25499/serviceAccounts/dota2stats-25499@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-05-20T01:03:04.140Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/dota2stats-25499/serviceAccounts/dota2stats-25499@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-20T01:03:06.875Z] [functions] service account IAM check errored, deploy may fail: Failed to make request to https://iam.googleapis.com/v1/projects/dota2stats-25499/serviceAccounts/dota2stats-25499@appspot.gserviceaccount.com:testIamPermissions {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://iam.googleapis.com/v1/projects/dota2stats-25499/serviceAccounts/dota2stats-25499@appspot.gserviceaccount.com:testIamPermissions","original":{"message":"request to https://iam.googleapis.com/v1/projects/dota2stats-25499/serviceAccounts/dota2stats-25499@appspot.gserviceaccount.com:testIamPermissions failed, reason: Socket connection timeout","type":"system","errno":"ERR_SOCKET_CONNECTION_TIMEOUT","code":"ERR_SOCKET_CONNECTION_TIMEOUT"},"status":500}
+[debug] [2023-05-20T01:03:06.876Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dota2stats-25499 [none]
+[debug] [2023-05-20T01:03:09.331Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/dota2stats-25499
+[debug] [2023-05-20T01:03:09.436Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/dota2stats-25499
+    at RetryOperation._fn (C:\Users\Javier\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project dota2stats-25499. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-05-20T01:04:30.321Z] ----------------------------------------------------------------------
+[debug] [2023-05-20T01:04:30.323Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javier\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2023-05-20T01:04:30.324Z] CLI Version:   12.1.0
+[debug] [2023-05-20T01:04:30.324Z] Platform:      win32
+[debug] [2023-05-20T01:04:30.324Z] Node Version:  v20.2.0
+[debug] [2023-05-20T01:04:30.324Z] Time:          Fri May 19 2023 21:04:30 GMT-0400 (hora de verano de Cuba)
+[debug] [2023-05-20T01:04:30.324Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-20T01:04:30.396Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-20T01:04:30.396Z] > authorizing via signed-in user (javierglezglez97@gmail.com)
+[debug] [2023-05-20T01:04:30.402Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2023-05-20T01:04:32.817Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+[debug] [2023-05-20T01:04:32.925Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+    at RetryOperation._fn (C:\Users\Javier\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
