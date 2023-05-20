@@ -2,8 +2,9 @@ const {Telegraf} = require('telegraf');
 const fetch = require('node-fetch');
 
 // Token de acceso de tu bot
-const token = 'token del bot de telegram';
-const api_token = 'token de la api de Stratz'
+const token = '6242272310:AAE2-5JnLaLnXQbp_Ep8LNJEiKgIury7Jzw';
+const api_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJodHRwczovL3N0ZWFtY29tbXVuaXR5LmNvbS9vcGVuaWQvaWQvNzY1NjExOTkxOTg1MzU5MzQiLCJ1bmlxdWVfbmFtZSI6IipBTExTVEFSKlJlcGVhdC5nZyoiLCJTdWJqZWN0IjoiMWU4ZGYxMzYtYzNiYS00YWM3LWIwZjEtMmNiNDQ2ZGFhZjNjIiwiU3RlYW1JZCI6IjEyMzgyNzAyMDYiLCJuYmYiOjE2ODI4NzYxOTQsImV4cCI6MTcxNDQxMjE5NCwiaWF0IjoxNjgyODc2MTk0LCJpc3MiOiJodHRwczovL2FwaS5zdHJhdHouY29tIn0.stJCSi74TPLRVUChrLG0TBMm0qnWQ54f1AER-eSsF7I'
+
 // Crea un nuevo bot
 const bot = new Telegraf(token);
 
@@ -124,7 +125,6 @@ bot.on('text', (ctx) => {
 
 // Inicia el bot
 bot.launch();
-
 
 
 
